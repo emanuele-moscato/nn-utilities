@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nn-utilities"
+version = "0.0.1"
+authors = [
+    {name = "Emanuele Moscato", email = "e.moscato1@gmail.com"}
+]
+description = "Utilities for working with neural networks"
+readme = "README.md"
+requires-python = ">= 3.10"
+dependencies = [
+    "tensorflow == 2.15.0",
+    "matplotlib == 3.8.2",
+    "seaborn == 0.13.0"
+]
