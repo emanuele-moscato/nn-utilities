@@ -41,4 +41,15 @@ This tells Pip to install the package found in the `nn_utilities` subdirectory o
 pip install 'git+ssh://git@github.com/<user>/<repo>.git@<branch>#subdirectory=<subdir>'
 ```
 
-Note: `<branch>` can even point to the identifier of a specific commit, in case a particular version needs to be installed.
+**Note:** `<branch>` can even point to the identifier of a specific commit, in case a particular version needs to be installed.
+
+## Testing
+
+After the installation, some manual testing can be done via the noteboos provided in the `notebooks/` subdirectory of the repo's root. However, better testing can be achieved by using `nose2`, which is installed as part of the package's requirements.
+
+Testing with `nose2` happens by automatically executing all Python scripts with filename matching the `test*.py` structure, which are placed in the `tests/` subdirectory. These script use the `unittest` library to write test cases and `nose2` is 100% compatible with this. Tu run the tests with `nose2`, navigate to the package's directory (`nn_utilities`, where the `tests/` directory is) and execute
+```
+nose2
+```
+
+**Note:** there's no guarantee on test coverage - this will probably remain as an example of how testing can be done in principle!
