@@ -43,6 +43,11 @@ pip install 'git+ssh://git@github.com/<user>/<repo>.git@<branch>#subdirectory=<s
 
 **Note:** `<branch>` can even point to the identifier of a specific commit, in case a particular version needs to be installed.
 
+If the version in the specified branch of the repo changes, the installation can be updated by adding the `-U` option to the Pip command,
+```
+pip install -U 'git+ssh://git@github.com/emanuele-moscato/nn-utilities.git@main#subdirectory=nn_utilities'
+```
+
 ## Testing
 
 After the installation, some manual testing can be done via the noteboos provided in the `notebooks/` subdirectory of the repo's root. However, better testing can be achieved by using `nose2`, which is installed as part of the package's requirements.
